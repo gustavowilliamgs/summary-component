@@ -57,7 +57,7 @@ main {
     height: 200px;
     border-radius: 50%;
     background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-    padding: 20px;
+    padding: 25px;
     margin-top: 20px;
 }
 
@@ -89,7 +89,7 @@ p {
 
 .summarys {
     background-color: var(--color-neutral-pale-blue);
-    margin-top: 20px;
+    margin-top: 25px;
     padding: 10px;
     border-radius: 12px;
     display: flex;
@@ -123,4 +123,23 @@ p {
 
 img {
     margin-bottom: -3px;
+}
+
+button {
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 45px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    color: var(--color-neutral-white);
+    background-color: var(--color-neutral-dark-gray-blue);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    transition: 1s;
 }
