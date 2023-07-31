@@ -1,93 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="styles.css" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <link rel="stylesheet" href="styles.css">
+        <script src="main.js" defer></script>
 
-    <title>Frontend Mentor | Results summary component</title>
+        <title>Frontend Mentor | Results summary component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            bottom: 10px;
-            position: absolute;
-            font-size: 11px;
-            text-align: center;
-        }
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                bottom: 10px;
+                position: absolute;
+                font-size: 11px;
+                text-align: center;
+                left: 50%;
+                transform: translateX(-50%);
+                color: rgb(83, 83, 83);
+            }
 
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
-</head>
+            .attribution a {
+                color: hsl(229, 45%, 28%);
+            }
+        </style>
+    </head>
 
-<body>
-
-    <main>
-        <article id="result">
-            <h1>Your Result</h1>
-
-            <div id="circle">
-                <span>76</span>
-                <small>of 100</small>
+    <body>
+        <main>
+            <div id="box">
+                <div id="result">
+                    <h1>Your Result</h1>
+                    <div id="circle">
+                        <span>76</span>
+                        <small>of 100</small>
+                    </div>
+                    <h2>Great</h2>
+                    <p>
+                        You scored higher than 65% of the people who have taken
+                        these tests.
+                    </p>
+                </div>
+                <div id="summary">
+                    <h1>Summary</h1>
+                    <section>
+                        <div class="left">
+                            <img src="" />
+                            <span class="title"></span>
+                        </div>
+                        <div class="right">
+                            <span class="score"></span> / 100
+                        </div>
+                    </section>
+                    <section>
+                        <div class="left">
+                            <img src="" />
+                            <span class="title"></span>
+                        </div>
+                        <div class="right">
+                            <span class="score"></span> / 100
+                        </div>
+                    </section>
+                    <section>
+                        <div class="left">
+                            <img src="" />
+                            <span class="title"></span>
+                        </div>
+                        <div class="right">
+                            <span class="score"></span> / 100
+                        </div>
+                    </section>
+                    <section>
+                        <div class="left">
+                            <img src="" />
+                            <span class="title"></span>
+                        </div>
+                        <div class="right">
+                            <span class="score"></span> / 100
+                        </div>
+                    </section>
+                    <button><span>Continue</span></button>
+                </div>
             </div>
+        </main>
 
-            <h2>Great</h2>
-            <p>
-                You scored higher than 65% of the people who have taken these tests.
-            </p>
-        </article>
-        <article id="summary">
-            <h1>Summary</h1>
-            <div class="summarys">
-                <span>
-                    <img src="assets/images/icon-reaction.svg" alt="">
-                    <span id="reaction">Reaction</span>
-                </span>
-                <span>
-                    <span class="result-summary">80</span> / 100
-                </span>
-            </div>
-            <div class="summarys">
-                <span>
-                    <img src="assets/images/icon-memory.svg" alt="">
-                    <span id="memory">Memory</span>
-                </span>
-                <span>
-                    <span class="result-summary">92</span> / 100
-                </span>
-            </div>
-            <div class="summarys">
-                <span>
-                    <img src="assets/images/icon-verbal.svg" alt="">
-                    <span id="verbal">Verbal</span>
-                </span>
-                <span>
-                    <span class="result-summary">61</span> / 100
-                </span>
-            </div>
-            <div class="summarys">
-                <span>
-                    <img src="assets/images/icon-visual.svg" alt="">
-                    <span id="visual">Visual</span>
-                </span>
-                <span>
-                    <span class="result-summary">72</span> / 100
-                </span>
-            </div>
-            <button id="button">Continue</button>
-        </article>
-    </main>
-
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Gustavo William G. Silva</a>.
-    </div>
-</body>
-
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by
+            <a href="https://github.com/gustavowilliamgs"
+                >Gustavo William G. Silva</a
+            >.
+        </div>
+    </body>
 </html>

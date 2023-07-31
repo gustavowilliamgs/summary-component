@@ -18,128 +18,128 @@
 
     --color-neutral-white: hsl(0, 0%, 100%);
     --color-neutral-pale-blue: hsl(221, 100%, 96%);
-    --color-neutral-light-lavender: hsl(241, 100%, 89%);
+    --color-neutral-light-lavender: hsl(241, 39%, 76%);
     --color-neutral-dark-gray-blue: hsl(224, 30%, 27%);
 }
 
 body {
-    height: 100vh;
-    display: grid;
-    place-items: center;
     font-size: 1em;
     font-weight: 500;
+    color: var(--color-neutral-light-lavender);
+    background-color: var(--color-neutral-white);
 }
 
 main {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#box {
     display: flex;
-    height: 480px;
-    -webkit-box-shadow: 10px 10px 300px -30px rgba(0, 0, 0, 0.300);
-    -moz-box-shadow: 10px 10px 300px -30px rgba(0, 0, 0, 0.300);
-    box-shadow: 10px 10px 300px -30px rgba(0, 0, 0, 0.300);
     border-radius: 30px;
+    box-shadow: 0px 30px 20px 10px hsl(0deg 0% 0% / 12%);
+    height: 450px;
+    width: 700px;
 }
 
 #result {
-    color: var(--color-neutral-light-lavender);
-    text-align: center;
-    width: 320px;
-    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     border-radius: 30px;
-    padding: 30px;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    width: 350px;
+    padding: 30px 50px 30px 50px;
+    text-align: center;
+}
+
+#result h1 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 #circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    display: block;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-    padding: 25px;
-    margin-top: 20px;
 }
 
 #circle span {
-    display: block;
-    font-size: 5em;
+    font-weight: 700;
+    font-size: 3.5em;
     color: var(--color-neutral-white);
 }
 
-h2 {
-    margin-top: 20px;
+#result h2 {
+    font-size: 1.5em;
     color: var(--color-neutral-white);
-}
-
-p {
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #summary {
-    padding: 30px;
-    width: 320px;
-    border-radius: 30px;
-    color: var(--color-neutral-light-lavender);
+    padding: 30px 50px 30px 50px;
 }
 
 #summary h1 {
     color: var(--color-neutral-dark-gray-blue);
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
-.summarys {
-    background-color: var(--color-neutral-pale-blue);
-    margin-top: 25px;
-    padding: 10px;
-    border-radius: 12px;
+section {
+    width: 250px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    background-color: var(--color-neutral-pale-blue);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
 }
 
-#reaction {
-    color: var(--color-primary-light-red);
+.score {
     font-weight: 700;
-}
-
-#memory {
-    color: var(--color-primary-orangey-yellow);
-    font-weight: 700;
-}
-
-#verbal {
-    color: var(--color-primary-green-teal);
-    font-weight: 700;
-}
-
-#visual {
-    color: var(--color-primary-cobalt-blue);
-    font-weight: 700;
-}
-
-.result-summary {
     color: var(--color-neutral-dark-gray-blue);
-    font-weight: 700;
-}
-
-img {
-    margin-bottom: -3px;
 }
 
 button {
-    border: none;
-    outline: none;
-    width: 80%;
-    height: 45px;
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 100%);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
     color: var(--color-neutral-white);
     background-color: var(--color-neutral-dark-gray-blue);
-    border-radius: 20px;
-    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 30px;
+    overflow: hidden;
 }
 
-button:hover {
+span {
+    z-index: 1;
+    position: relative;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-    transition: 1s;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+button:hover::before:not(button span) {
+    opacity: 1;
 }
