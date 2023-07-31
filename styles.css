@@ -123,7 +123,7 @@ button {
     overflow: hidden;
 }
 
-span {
+button span {
     z-index: 1;
     position: relative;
 }
@@ -142,4 +142,37 @@ button::before {
 
 button:hover::before:not(button span) {
     opacity: 1;
+}
+
+@media screen and (max-width: 699px) {
+    #box {
+        flex-direction: column;
+        height: 100%;
+        width: 100vw;
+        box-shadow: none;
+    }
+
+    #result {
+        width: 100vw;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    #summary {
+        padding: 20px;
+    }
+
+    section {
+        width: auto
+    }
+
+    button {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90vw;
+    }
+    .attribution {
+        display: none;
+    }
 }

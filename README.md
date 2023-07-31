@@ -36,7 +36,6 @@ Os usuários devem ser capazes de:
 - Propriedades personalizadas de CSS
 - Flexbox
 - CSS Grid
-- Fluxo de trabalho "mobile-first"
 
 ### O que eu aprendi
 
