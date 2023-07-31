@@ -105,6 +105,10 @@ section {
     border-radius: 8px;
 }
 
+img {
+    margin-bottom: -5px;
+}
+
 .score {
     font-weight: 700;
     color: var(--color-neutral-dark-gray-blue);
